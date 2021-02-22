@@ -12,8 +12,8 @@ export default class Task {
     get Template() {
         return /* html */`
             <div class='row'>
-            <ul class= ''"${this.body.includes('extra') ? 'text-danger': ''}" ><li class=''><span class=''>${this.body}</span>  
-            <button type="button" class="btn text-danger close"
+            <ul><li class=''><span class=''>${this.body}</span>  
+            <button type="button" class="text-danger close"
             onclick="app.taskController.delete('${this.id}')"><span>&times;</span></button></li> </ul>
             </div>
         
