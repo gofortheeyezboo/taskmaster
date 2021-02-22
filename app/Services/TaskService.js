@@ -20,8 +20,9 @@ class TaskService{
             
         }
     checkBox(taskId){
-        let checkBoxElem = document.getElementById('checkbox')
+        // let checkBoxElem = document.getElementById('checkbox')
         let temp = ProxyState.tasks
+        // checkBoxElem.toggleAttribute('checked')
         temp.forEach(task => {if(task.id == taskId){
             if(task.isChecked == false){
                 task.isChecked = true

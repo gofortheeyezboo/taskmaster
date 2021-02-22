@@ -12,7 +12,8 @@ export default class Task {
     get Template() {
         return /* html */`
             <div class='row'>
-            <ul><li class=''><span class=''>${this.body}</span>  
+            <ul><li class=''><span class=''>${this.body}</span>
+            <input type='checkbox' ${this.isChecked ? 'checked':'' } onclick="app.taskController.checkBox('${this.id}')">  
             <button type="button" class="text-danger close"
             onclick="app.taskController.delete('${this.id}')"><span>&times;</span></button></li> </ul>
             </div>
