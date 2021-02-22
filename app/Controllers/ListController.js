@@ -22,7 +22,8 @@ export default class ListController{
         let form = event.target
         let rawList = {
             title: form.title.value,
-            body: form.body.value
+            body: form.body.value,
+            color: form.selectColor.value
         }
     listService.create(rawList)       
     }

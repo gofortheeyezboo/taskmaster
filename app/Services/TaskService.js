@@ -19,7 +19,23 @@ class TaskService{
         }
             
         }
-
+    checkBox(taskId){
+        let checkBoxElem = document.getElementById('checkbox')
+        let temp = ProxyState.tasks
+        temp.forEach(task => {if(task.id == taskId){
+            if(task.isChecked == false){
+                task.isChecked = true
+                
+            }else{if(task.isChecked == true){
+                task.isChecked = false
+            }
+            }
+        }
+        console.log(task.isChecked);    
+        });
+        
+        ProxyState.tasks = temp
+    }
     }
 
 export const taskService = new TaskService()

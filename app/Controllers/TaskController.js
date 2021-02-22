@@ -21,4 +21,8 @@ export default class TaskController{
         taskService.delete(taskId)
     }
 
+    checkBox(taskId){
+        taskService.checkBox(taskId)
+    }
+
 }

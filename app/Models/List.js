@@ -2,15 +2,16 @@ import { generateId } from "../Utils/GenerateId.js"
 import { ProxyState } from "../AppState.js";
 
 export default class List {
-    constructor({title, body, id = generateId()}) {
+    constructor({title, body, color, id = generateId()}) {
         this.title = title
         this.body = body
+        this.color = color
         this.id = id
     }
 
     get Template() {
         return /*html*/`
-                <div class="col-6 border rounded shadow-lg">
+                <div class="col-6 border rounded shadow-lg custom-text ${this.color}">
                     <h1>${this.title}<button class="text-danger close mt-1"
                     onclick="app.listController.delete('${this.id}')"><span>&times;</span></button></h1>
                     <h5>List Purpose: ${this.body}</h5>

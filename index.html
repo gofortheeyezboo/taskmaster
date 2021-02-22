@@ -17,13 +17,21 @@
             <h1>TaskMaster</h1>
         </nav>
     </header>
-    <main class="container-fluid">
+    <main class="container-fluid bg-image">
         <div class="row mt-2">
             <div class="col-12">
                 <form onsubmit="app.listController.create(event)">
                     <div class="form-group">
                         <input required type="text" minlength="3" maxlength="15" name="title" placeholder="The name of your list">
                         <input required type="text" name="body" placeholder="What is this list for?">
+                        <select  id="selectColor">
+                            <option selected>List Color...</option>
+                            <option id="bg-success" value="bg-success">Green</option>
+                            <option id="bg-primary" value="bg-primary">Blue</option>
+                            <option id="bg-danger" value="bg-danger">Red</option>
+                            <option id="bg-secondary" value="bg-secondary">Pink</option>
+                            <option value="bg-warning">Orange</option>
+                        </select>
                         <button class="btn-primary btn" type="submit">Create List</button>
                     </div>
                 </form>

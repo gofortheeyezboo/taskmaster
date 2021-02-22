@@ -12,11 +12,7 @@ export default class Task {
     get Template() {
         return /* html */`
             <div class='row'>
-            <ul class= ''"${this.body.includes('extra') ? 'text-danger': ''}" ><li class=''><span class=''>${this.body}</span> 
-            <input id='checkbox' type="checkbox" value="">
-            <span class='text-success'>
-              Done
-            </span>    
+            <ul class= ''"${this.body.includes('extra') ? 'text-danger': ''}" ><li class=''><span class=''>${this.body}</span>  
             <button type="button" class="btn text-danger close"
             onclick="app.taskController.delete('${this.id}')"><span>&times;</span></button></li> </ul>
             </div>
